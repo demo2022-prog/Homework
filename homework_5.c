@@ -56,12 +56,12 @@ void TPK () {
 int main(int argc, char const *argv[])
 {
 	const int SIZE = 10;
-	/*int arr[SIZE];
+	int arr[SIZE];
 	fillRandom(arr, SIZE, 10); //lesson 1
 	printIntArray(arr, SIZE, 3); 
 	printf("\n");
 	bubbleSort(arr, SIZE);
-	printIntArray(arr, SIZE, 3); */
+	printIntArray(arr, SIZE, 3); 
 	TPK();
 
 	return 0;
