@@ -37,21 +37,21 @@ T popStack()
 
 void binaryTranslator(int number)
 {
-	int i;
-	int num = number;
-	while (number != 0)
-	{
-		if (number % 2 == 0)
-		{
-		pushStack('0');
- 		number /= 2;
-		} else
-		{
-			pushStack('1');
-			number = number / 2;
-		}
-	i++;
-	}
+    int i;
+    int num = number;
+    while (number != 0)
+    {
+        if (number % 2 == 0)
+        {
+        pushStack('0');
+        number /= 2;
+        } else
+        {
+            pushStack('1');
+            number = number / 2;
+        }
+    i++;
+    }
 }
 
 typedef struct 
@@ -192,17 +192,19 @@ void prQueueTest()
 
 int main(int argc, char const *argv[])
 {
-	int number;
-	printf("Enter the number: ");
-	scanf("%d", &number);
+    prQueueTest();
 
-	binaryTranslator(number);
-	while (cursor != -1) 
-	{
-		printf("%c ", popStack());
-    }
     printf("\n\n");
 
-	prQueueTest();
-	return 0;
+    int number;
+    printf("Enter the number: ");
+    scanf("%d", &number);
+
+    binaryTranslator(number);
+    while (cursor != -1) 
+    {
+        printf("%c ", popStack());
+    }
+    printf("\n");
+    return 0;
 }
