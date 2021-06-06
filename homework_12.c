@@ -6,8 +6,8 @@
 #define false 1 != 1
 typedef int boolean;
 #define SZ 10
-#define TREE 2 // Задаем кол-во деревьев
-#define SIZE 100 // Задаем кол-во елементов в дереве
+#define TREE 50 // Задаем кол-во деревьев
+#define SIZE 10000 // Задаем кол-во елементов в дереве
 
 FILE *file;
 
