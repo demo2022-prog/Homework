@@ -35,6 +35,12 @@ typedef struct {
     int size;
 } TwoLinkList;
 
+typedef struct Node {
+    int key;
+    struct Node *left;
+    struct Node *right;
+} BinTreeIntNode;
+
 /*
  * Function, that swaps values of two integer variables
  *
@@ -66,6 +72,65 @@ void printIntArray(int* array, int size, int offset);
  *      (ex. 100 will give numbers 0-99)
  */
 void fillIntRandom(int* array, int size, int border);
+void clearIntArray(int* arr, const int size);
+
+/*
+ * Function that gets a value from a dynamically initialized int** array
+ *
+ * Return:
+ * int value
+ *
+ * Parameters:
+ * array - int** pointer to an array
+ * row, col - size of printed array as if array[row][col]
+ */
+int get2dInt(int** array, int row, int col);
+
+/*
+ * Function that sets a value from a dynamically initialized int** array
+ *
+ * Parameters:
+ * array - int** pointer to an array
+ * row, col - size of printed array as if array[row][col]
+ * value - value to be written to an array cell
+ */
+void set2dInt(int** array, int row, int col, int value);
+
+/*
+ * Function, that initializes a dynamic
+ * two-dimensional int** array of a given size
+ *
+ * Return:
+ * int** pointer
+ *
+ * Parameters:
+ * array - int** pointer to an array that is going to be initialized
+ * row, col - size parameters as if array[row][col]
+ */
+int** init2dIntArray(int** array, int row, int col);
+
+/*
+ * Function, that prints any two-dimension integer pointer array
+ * of a given size with a given offset
+ *
+ * Parameters:
+ * array - int** pointer to an array
+ * row, col - size of printed array as if array[row][col]
+ * offset - number of symbols that should be taken by a value between commas,
+ *          and filled with whitespaces, if given value contains less characters.
+ */
+void print2dIntArray(int** array, int row, int col, int offset);
+
+/*
+ * Function, that fills any two-dimension integer pointer array
+ * of a given size with a multiplication table
+ *
+ * Parameters:
+ * array - int** pointer to an array
+ * row, col - size of printed array as if array[row][col]
+ */
+void fill2dIntArray(int** array, int row, int col);
+void setLineValues(int** matrix, int cols, int row, ...);
 
 void initOneLinkList(OneLinkList *lst);
 void printOneLinkIntNode(OneLinkNode *n);
@@ -80,4 +145,8 @@ boolean TwoLinkEnqueue(TwoLinkList *queue, T value);
 T TwoLinkDequeue(TwoLinkList *queue);
 
 void printCyclicIntList(OneLinkList *lst);
+
+BinTreeIntNode* treeInsert(BinTreeIntNode *t, int data);
+void printBinTree(BinTreeIntNode *root);
+boolean treeNodeDelete(BinTreeIntNode *root, int key);
 #endif //GB_DSA_C_GEEK_H
