@@ -70,6 +70,8 @@ void printTable(OneLinkNode** table, int size) {
     printf("\n");
 }
 
+//lesson 2
+
 int maxMoney (int* task, int K) {
     int max = 0;
     for(unsigned i = 0; i < SIZEm; ++i) {
@@ -94,6 +96,9 @@ int Calculation(int* task, int K, int sum) {
 }
 
 int main(int argc, char *argv[]) {
+
+//lesson 1
+
     htSize = 8;
     int* arr;
     const int SZ = 20;
@@ -112,6 +117,9 @@ int main(int argc, char *argv[]) {
 
     printTable(hashTable, htSize);
     //printf("\n");
+    //
+
+//lesson 2
 
     int task[SIZEm] = {50, 10, 5, 2, 1};
     const int SUM = 98;
